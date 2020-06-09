@@ -12,11 +12,6 @@ public final class Transliterator {
 
     private static final Map<String, String> letters = new HashMap<>();
 
-    private enum Direction {
-        CYRILLIC_TO_LATIN,
-        LATIN_TO_CYRILLIC
-    }
-
     static {
         letters.put("a", "а");
         letters.put("b", "б");
@@ -53,6 +48,11 @@ public final class Transliterator {
         letters.put("w", "в");
         letters.put("q", "ку");
         letters.put("iy", "ий");
+    }
+    
+    public enum Direction {
+        CYRILLIC_TO_LATIN,
+        LATIN_TO_CYRILLIC
     }
 
     public static String transliterate(String string, Direction direction) {
